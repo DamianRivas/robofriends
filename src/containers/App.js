@@ -33,16 +33,14 @@ class App extends Component {
     const header = robots.length ? "RoboFriends" : "Loading";
 
     return (
-      <div className="tc" style={{height: '100vh', display: 'flex', flexDirection: 'column'}}>
+      <div className="tc" style={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
         <header>
           <h1 className="f1">{header}</h1>
           <SearchBox searchChange={this.onSearchChange} />
         </header>
-        <section className="robots" style={{ flex: '1' }}>
-          <Scroll>
-            <CardList robots={filteredRobots} />
-          </Scroll>
-        </section>
+        <Scroll>
+          <CardList robots={filteredRobots} />
+        </Scroll>
       </div>
     );
   }
